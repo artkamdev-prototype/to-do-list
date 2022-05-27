@@ -5,6 +5,13 @@ const ContentComponent = ({select, setSelect, lists, setLists, tasks, setTasks})
     const [filter, setFilter] = useState(-1)
     const [selectData, setSelectData] = useState([])
     //
+    const handleRemove = (task) => (e) => {
+        const newTasks = [...tasks]
+        const findIndex = newTasks.findIndex(x => x[2] === task[2])
+        newTasks.splice(findIndex, 1)
+        setTasks(newTasks)
+    }
+    //
     const handleRadio = (task) => {
         const newTasks = [...tasks]
         newTasks[task[2]][1][0] = !newTasks[task[2]][1][0];
@@ -13,11 +20,10 @@ const ContentComponent = ({select, setSelect, lists, setLists, tasks, setTasks})
     //
     const handleTaskEdit = (task) => (e) => {
         if (e.key === 'Enter') {
-            // e.preventDefault()
-            // alert(JSON.stringify(tasks[task[2]][1][1]))
             const newTasks = [...tasks]
             newTasks[task[2]][1][1] = e.target.value;
             e.target.placeholder = ""
+            e.target.value = ""
             setTasks(newTasks)
         }        
     }
@@ -38,7 +44,7 @@ const ContentComponent = ({select, setSelect, lists, setLists, tasks, setTasks})
             </div>
             <input type='text' className='Fill Border-None' placeholder={task[1][1]} onKeyDown={handleTaskEdit(task)}/>
             <div className='Char-Button'>*</div>
-            <div className='Char-Button'>-</div>
+            <div className='Char-Button' onClick={handleRemove(task)}>-</div>
         </li>
     //
     const showAllTasks = (task) => task
@@ -57,9 +63,8 @@ const ContentComponent = ({select, setSelect, lists, setLists, tasks, setTasks})
             e.preventDefault()
             if(select === -1)
             {
-                alert("not allowed in all!")
+                alert("not allowed in list *All*! Please choose another list in the nav")
             } else {
-                alert(e.target.value)
                 const newTasks = [...tasks]
                 newTasks.push([select, [false, e.target.value], tasks.length])
                 setTasks(newTasks)
@@ -75,7 +80,7 @@ const ContentComponent = ({select, setSelect, lists, setLists, tasks, setTasks})
       <div className='ContentComponent'>
             <input type="text" className='Margin-Bottom Max-Width Border-None Border-Bottom' placeholder='Create New Task' onKeyDown={handleInput}/>
             <div className='Sort-Buttons Max-Width'>
-                <div className='Text-Button Button-Active' onClick={() => setFilter(-1)}>All</div>
+                <div className='Text-Button' onClick={() => setFilter(-1)}>All</div>
                 <div className='Text-Button' onClick={() => setFilter(0)}>Active</div>
                 <div className='Text-Button' onClick={() => setFilter(1)}>Completed</div>
             </div>

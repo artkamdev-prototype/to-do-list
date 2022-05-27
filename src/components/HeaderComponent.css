@@ -3,7 +3,8 @@
     color: #fff;
     min-height: 40px;
     width: 100%;
-    
+    max-height: 50%;
+    overflow-y: auto;
 }
 .HeaderComponent .Mono {
     font-family: 'Courier New', Courier, monospace;

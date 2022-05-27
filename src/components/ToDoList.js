@@ -4,12 +4,9 @@ import HeaderComponent from './HeaderComponent';
 import NavComponent from './NavComponent';
 import ContentComponent from './ContentComponent';
 
-const ToDoList = () => {
-    
-
+const ToDoList = () => {  
     const [select, setSelect] = useState(0)
-    
-    // global state
+    //
     const [lists, setLists] = useState([        
         "Business",
         "WBS-Fullstack",
@@ -23,7 +20,6 @@ const ToDoList = () => {
         [1, [true, "Be awesome"], 3],
         [1, [true, "Be fantastic"], 4],
         [1, [true, "Be like group-2"], 5],
-        [2, [true, "<h1>test-h1</h1>"], 5],
     ])
     //
     return (
