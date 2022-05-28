@@ -19,7 +19,9 @@ const ContentComponent = ({select, setSelect, lists, setLists, tasks, setTasks})
     }
     //
     const handleTaskEdit = (task) => (e) => {
+        
         if (e.key === 'Enter') {
+            e.preventDefault()
             const newTasks = [...tasks]
             newTasks[task[2]][1][1] = e.target.value;
             e.target.placeholder = ""
@@ -59,6 +61,7 @@ const ContentComponent = ({select, setSelect, lists, setLists, tasks, setTasks})
         .map((x, i) => createListItem(x, i))
     //
     const handleInput = (e) => {
+        // e.preventDefault()
         if (e.key === 'Enter') {
             e.preventDefault()
             if(select === -1)
@@ -91,11 +94,11 @@ const ContentComponent = ({select, setSelect, lists, setLists, tasks, setTasks})
                 }
             </ul>
         </div>
-        <div className='Footer'>
+        {/* <div className='Footer'>
             <div className='Text-Button'>Complete All</div>
             <div className='Text-Button'>Activate All</div>
             <div className='Text-Button Button-Danger'>Remove All</div>
-        </div>          
+        </div>           */}
       </div>
     )
 }

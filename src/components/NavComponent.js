@@ -7,7 +7,7 @@ const NavComponent = ({select, setSelect, lists, setLists, tasks, setTasks}) => 
         setSelect(index)
     }
     const createListItem = (x, index, number) =>
-        <li key={index} onClick={handleSelect(index)} style={{backgroundColor: index === select ? "#999" : null}}>
+        <li key={index} onClick={handleSelect(index)} style={{backgroundColor: index === select ? "#999" : "#0000"}}>
             <p>{x}</p>
             <p>{number}</p>
         </li>
