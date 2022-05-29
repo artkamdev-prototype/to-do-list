@@ -1,0 +1,6 @@
+.TasksList {
+    /* background-color: red; */
+    display: flex;
+    flex: auto;
+    flex-direction: column;    
+}

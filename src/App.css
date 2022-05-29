@@ -1,5 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@600&display=swap');
+
+/* default elements */
+
+/* specific elements */
+
+/*  */
+.Categories {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+.Tasks {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+
+
+
+
+
+
 * {
+  box-sizing: border-box;
   border-color: #333;
   padding: 0px;
   margin: 0px;
@@ -25,30 +51,25 @@ main {
   flex: 1;
 }
 .Border-None {
-  border: 0px;
+  border: 0px !important;
+}
+.Border-Top {
+  border-top: 10px solid  !important;
 }
 .Border-Bottom {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid !important;
 }
 .Border-Right {
-  border-right: 1px solid;
+  border-right: 1px solid !important;
 }
 .Text-Button {
-  /* background-color: pink; */
   padding: 10px 20px;
   height: 20px;
-  /* justify-content: center; */
   align-items: center;
   text-align: center;
-  /* display: inline-block; */
-  /* line-height: 1rem; */
-  /* height: 100%; */
-  /* vertical-align: middle; */
 }
 .Char-Button {
-  /* background-color: blueviolet; */
   height: 40px;
-  /* width: 50px; */
   min-width: 40px;
   font-size: 1.2rem;
   display: inline-block;
@@ -61,33 +82,56 @@ main {
 .Fill {
   flex: auto;
 }
-.Button-Active {
-  background-color: #ddd;
+.Active {
+  background-color: darkseagreen !important;
 }
+.Active-Text {
+  background-color: beige !important;
+}
+/* .Button-Active {
+  background-color: #ddd;
+} */
 .Button-Danger {
   background-color: #FED1D1;
 }
+
 input[type=text] {
-  background-color: #F1F1F1;
-  margin: 0px;
-  padding: 10px 0px;
-  height: 20px;
-  /* width: 100%; */
-  /* border: 0;
-  border-bottom: 1px solid #333; */
-  resize: none;
-outline: none;
-text-align: start;
-}
-input[type=text] :focus{
-  background-color: #333;
-  padding: 0px;
-  margin: 0px;
-  padding: 10px 0px;
-  height: 20px;
-  /* width: 100%; */
-  border: 0;
-  border-bottom: 1px solid #333;
+  background-color: #0000;
+  padding: 10px 20px;
   resize: none;
   outline: none;
+  text-align: start;
+  border: 0px;
+}
+input[type=text]:hover{
+  background-color: #ccc;
+}
+
+
+.Scroll-Y {
+  flex: auto;
+  overflow-y: auto;
+  height: 100px;
+}
+
+button {
+  background-color: #0000;
+  border: 0px;
+  padding: 10px 20px;
+  min-width: 70px;
+}
+button:hover {
+  background-color: #ccc;
+}
+li:hover {
+  background-color: #ccc;
+}
+
+
+.Flex-End {
+  display: flex;
+  justify-content: flex-end;
+}
+.Color-Red {
+  background-color: red;
 }

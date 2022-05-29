@@ -1,0 +1,13 @@
+.TaskListItem {
+    /* background-color: aqua; */
+    display: flex;
+}
+.TaskListItem .Text {
+    /* background-color: blue; */
+    flex: 1;
+    padding: 10px 20px;
+}
+.TaskListItem .Active-Text {
+    background-color: red !important;
+    font-size: 4rem;
+}

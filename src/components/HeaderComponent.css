@@ -5,10 +5,6 @@
     width: 100%;
     max-height: 50%;
     overflow-y: auto;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* margin: auto; */
-    /* text-align: center; */
 }
 .HeaderComponent .Mono {
     font-family: 'Courier New', Courier, monospace;

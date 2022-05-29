@@ -7,7 +7,7 @@ import ContentComponent from './ContentComponent';
 const ToDoList = () => {  
     const [select, setSelect] = useState(0)
     //
-    const [lists, setLists] = useState([        
+    const [lists, setLists] = useState([    
         "Business",
         "WBS-Fullstack",
         "2022-05-27"
