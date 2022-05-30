@@ -7,7 +7,9 @@ const TaskListItem = ({id, text, onClickActive, onClickFavorite, onClickDelete, 
     return ( 
         <li className='TaskListItem' id={id}>
 
-            <Button text={`[${isActive ? " " : "X"}]`} onClick={() => onClickActive(id)}/>
+            <Button 
+            text={`[${isActive ? "_" : "#"}]`} 
+            onClick={() => onClickActive(id)}/>
 
 
             <TasksInputText 
@@ -15,9 +17,12 @@ const TaskListItem = ({id, text, onClickActive, onClickFavorite, onClickDelete, 
             placeholder={text}
             onKeyPress={onKeyPress(id)} />
 
-            <Button text={`[${isFavorite ? "*" : " "}]`} onClick={() => onClickFavorite(id)} />
+            <Button 
+            text={`${isFavorite ? "*" : "."}`} 
+            onClick={() => onClickFavorite(id)} />
 
-            <Button text="[-]" onClick={() => onClickDelete(id)}/>
+            <Button className='Button-Danger'
+            text="x" onClick={() => onClickDelete(id)}/>
 
         </li>
     );

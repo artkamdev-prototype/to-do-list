@@ -152,6 +152,9 @@ const App = () => {
 
         <div className='Tasks'>
 
+          <br />
+          <br />
+
           <TasksInputText 
           className=" Border-Bottom" 
           placeholder={"Create New Task"}

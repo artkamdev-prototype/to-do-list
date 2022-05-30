@@ -88,11 +88,8 @@ main {
 .Active-Text {
   background-color: beige !important;
 }
-/* .Button-Active {
-  background-color: #ddd;
-} */
 .Button-Danger {
-  background-color: #FED1D1;
+  color: red !important;
 }
 
 input[type=text] {
