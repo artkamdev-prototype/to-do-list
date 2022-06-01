@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@600&display=swap');
+:root {
+  --font-size: 16px;
+}
 /* ------------------------------ Theme colors ------------------------------ */
 .Theme-Default {
   --transparent: #0000;
   --primary: #222;
   --secondary: #666;
-  --hover-0: #ccc;
+  --hover-0: #DADADA;
   --active: darkseagreen;
   --danger: red;
-  --color-bg-0: #f1f1f1;
+  --color-bg-0: #F3F2EE;
   --color-bg-1: red;
   --font-0: 'Alumni Sans', sans-serif;
+  --font-size: 1rem;
+  --letter-spacing: 4px;
+  --font-weight: 500;
 }
 .Theme-Dark {
   --transparent: #0000;
@@ -21,6 +27,9 @@
   --color-bg-0: #000;
   --color-bg-1: red;
   --font-0: 'Alumni Sans', sans-serif;
+  --font-size: 1rem;
+  --letter-spacing: 4px;
+  --font-weight: 500;
 }
 .Theme-Purple {
   --transparent: #0000;
@@ -32,8 +41,36 @@
   --color-bg-0: #E6DDFF;
   --color-bg-1: red;
   --font-0: 'Alumni Sans', sans-serif;
+  --font-size: 1rem;
+  --letter-spacing: 4px;
+  --font-weight: 500;
+}
+.Theme-Cheese {
+  --transparent: #0000;
+  --primary: #222;
+  --secondary: #666;
+  --hover-0: #01BEDF;
+  --active: #c7f;
+  --danger: red;
+  --color-bg-0: #FFD334;
+  --color-bg-1: red;
+  --font-0: 'Alumni Sans', sans-serif;
+  --font-size: 2rem;
+  --letter-spacing: 4px;
+  --font-weight: 900;
 }
 /* ------------------------------ default elements ------------------------------ */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  
+  font-family: var(--font-0);
+  letter-spacing: var(--letter-spacing);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  /* line-height: 1.6rem; */
+}
 .App {
   --color-button-active: var(--active);
   --color-button-hover: var(--hover-0);
@@ -49,22 +86,12 @@
 
   --color-border-0: var(--primary);
 
-  margin: 0px;
   background-color: var(--color-bg-0);
+  margin: 0px;  
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-flow: column;
-}
-* {
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
-  line-height: 1.2rem;
-  font-family: var(--font-0);
-  letter-spacing: 4px;
-  font-weight: 500;
-  font-size: 16px;
 }
 main {
   display: flex;
