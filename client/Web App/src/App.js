@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css';
-import { initThemes, initCategories, initTasks } from './data/data.js'
+import { colors } from './styles/colors.js'
+import { initCategories, initTasks } from './data/data.js'
 import Header from './components/header/header';
 import CategoriesList from './components/list/categoriesList';
 import TasksList from './components/list/tasksList';
@@ -10,7 +11,7 @@ import ButtonRow from './components/button/buttonRow';
 
 const App = () => {
   //
-  const [themes, setThemes] = useState(initThemes)
+  const [themes, setThemes] = useState(0)
   //
   const [categories, setCategories] = useState(initCategories)
   //
@@ -130,10 +131,16 @@ const App = () => {
         setTasks(newTaskList)
   }
   //
+  const toggleTheme = () => themes < colors.length-1
+    ? setThemes(themes+1)
+    : setThemes(0)
+  //
   return (
-    <div className="App">
+    <div className={`App ${colors[themes].name}`}>
 
-      {/* <Header /> */}
+     
+
+      <Header className='Border-Bottom' toggleTheme={toggleTheme} themeName={colors[themes].name}/>
 
       <main>
 

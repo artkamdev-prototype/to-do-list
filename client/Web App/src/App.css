@@ -1,50 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@600&display=swap');
+/* ------------------------------ Theme colors ------------------------------ */
+.Theme-Default {
+  --transparent: #0000;
+  --primary: #222;
+  --secondary: #666;
+  --hover-0: #ccc;
+  --active: darkseagreen;
+  --danger: red;
+  --color-bg-0: #f1f1f1;
+  --color-bg-1: red;
+  --font-0: 'Alumni Sans', sans-serif;
+}
+.Theme-Dark {
+  --transparent: #0000;
+  --primary: #ccc;
+  --secondary: #999;
+  --hover-0: #333;
+  --active: #666;
+  --danger: red;
+  --color-bg-0: #000;
+  --color-bg-1: red;
+  --font-0: 'Alumni Sans', sans-serif;
+}
+.Theme-Purple {
+  --transparent: #0000;
+  --primary: #222;
+  --secondary: #666;
+  --hover-0: #F2EDFF;
+  --active: #CDBCFF;
+  --danger: red;
+  --color-bg-0: #E6DDFF;
+  --color-bg-1: red;
+  --font-0: 'Alumni Sans', sans-serif;
+}
+/* ------------------------------ default elements ------------------------------ */
+.App {
+  --color-button-active: var(--active);
+  --color-button-hover: var(--hover-0);
 
-/* colors */
+  --color-li-hover: var(--hover-0);
 
-/* default elements */
+  --color-input-text: var(--primary);
+  --color-input-text-placeholder: var(--secondary);
+  --color-input-text-hover: var(--hover-0);
+
+  --color-text-0: var(--primary);
+  --color-text-warning: var(--danger);
+
+  --color-border-0: var(--primary);
+
+  margin: 0px;
+  background-color: var(--color-bg-0);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+}
 * {
   box-sizing: border-box;
-  border-color: #333;
   padding: 0px;
   margin: 0px;
   line-height: 1.2rem;
-  /* font-family: 'Oswald', sans-serif; */
-  font-family: 'Alumni Sans', sans-serif;
+  font-family: var(--font-0);
   letter-spacing: 4px;
   font-weight: 500;
   font-size: 16px;
 }
+main {
+  display: flex;
+  flex: 1;
+}
 input[type=text] {
-  background-color: #0000;
+  background-color: var(--transparent);
+  color: var(--color-input-text);
   padding: 10px 20px;
   resize: none;
   outline: none;
   text-align: start;
   border: 0px;
 }
+input[type=text]::placeholder {
+  color: var(--color-input-text-placeholder);
+}
 input[type=text]:hover{
-  background-color: #ccc;
+  background-color: var(--color-input-text-hover);
 }
 button {
-  background-color: #0000;
+  background-color: var(--transparent);
+  color: var(--color-text-0);
   border: 0px;
   padding: 10px 20px;
   min-width: 70px;
 }
 button:hover {
-  background-color: #ccc;
+  background-color: var(--color-button-hover);
 }
 li:hover {
-  background-color: #ccc;
+  background-color: var(--color-li-hover);
 }
-/* specific elements */
+li p {
+  color: var(--color-text-0);
+}
+/* ------------------------------ specific elements ------------------------------ */
 .Flex-End {
   display: flex;
   justify-content: flex-end;
-}
-.Color-Red {
-  background-color: red;
 }
 .Categories {
   display: flex;
@@ -58,31 +118,20 @@ li:hover {
   max-width: 800px;
   margin: 0px auto;
 }
-.App {
-  margin: 0px;
-  border: 0px;
-  background-color: #F1F1F1;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-flow: column;
-}
-main {
-  /* background-color: #888; */
-  display: flex;
-  flex: 1;
-}
 .Border-None {
   border: 0px !important;
 }
 .Border-Top {
-  border-top: 10px solid  !important;
-}
-.Border-Bottom {
-  border-bottom: 1px solid !important;
+  border-top: 10px solid var(--color-border-0) !important;
 }
 .Border-Right {
-  border-right: 1px solid !important;
+  border-right: 1px solid var(--color-border-0) !important;
+}
+.Border-Bottom {
+  border-bottom: 1px solid var(--color-border-0) !important;
+}
+.Border-Left {
+  border-left: 1px solid var(--color-border-0) !important;
 }
 .Text-Button {
   padding: 10px 20px;
@@ -105,13 +154,10 @@ main {
   flex: auto;
 }
 .Active {
-  background-color: darkseagreen !important;
-}
-.Active-Text {
-  background-color: beige !important;
+  background-color: var(--color-button-active) !important;
 }
 .Button-Danger {
-  color: red !important;
+  color: var(--color-text-warning) !important;
 }
 .Scroll-Y {
   flex: auto;

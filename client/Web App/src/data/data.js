@@ -1,9 +1,9 @@
-export const initThemes = [
-    { id: 0, background: "red", color: "green", text: "Default" },
-    { id: 1, background: "green", color: "red", text: "Blueprint" },
-    { id: 2, background: "green", color: "red", text: "Cheese" },
-    { id: 3, background: "green", color: "red", text: "Prinzes" },
-];
+// export const initThemes = [
+//     { id: 0, background: "red", color: "green", text: "Default" },
+//     { id: 1, background: "green", color: "red", text: "Blueprint" },
+//     { id: 2, background: "green", color: "red", text: "Cheese" },
+//     { id: 3, background: "green", color: "red", text: "Prinzes" },
+// ];
 //
 export const initCategories = [
     { id: 0, text: "Business", tasks: [0,1,2]},
