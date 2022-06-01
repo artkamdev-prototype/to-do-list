@@ -4,7 +4,6 @@ import { initThemes, initCategories, initTasks } from './data/data.js'
 import Header from './components/header/header';
 import CategoriesList from './components/list/categoriesList';
 import TasksList from './components/list/tasksList';
-import ToDoList from './components/ToDoList';
 import Button from './components/button/button';
 import TasksInputText from './components/inputText/tasksInputText';
 import ButtonRow from './components/button/buttonRow';
@@ -20,7 +19,7 @@ const App = () => {
   const [selectCategoriesId, setSelectCategoriesId] = useState(-1)
   //
   const [tasksFilterId, setTasksFilterid] = useState(0)
-//
+  //
   const handleSelectCategoriesId = (id) => {
     setSelectCategoriesId(id)
   }
@@ -69,8 +68,14 @@ const App = () => {
     
     // TASK
     const newTaskList = [...tasks]
-    let highestID = tasks[tasks.length-1].id
-    highestID += 1
+
+    // tasks exist?
+    let highestID = 0;
+    if(tasks.length > 0) {
+      highestID = tasks[tasks.length-1].id
+      highestID += 1
+    }
+    
     const newTask = {id: highestID, active: true, favorite: false, text: e.target.value}
     newTaskList.push(newTask)
     setTasks(newTaskList)

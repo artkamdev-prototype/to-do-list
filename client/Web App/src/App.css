@@ -1,29 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@600&display=swap');
 
+/* colors */
+
 /* default elements */
-
-/* specific elements */
-
-/*  */
-.Categories {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-}
-.Tasks {
-  display: flex;
-  flex: auto;
-  flex-direction: column;
-  max-width: 800px;
-  margin: 0px auto;
-}
-
-
-
-
-
-
-
 * {
   box-sizing: border-box;
   border-color: #333;
@@ -35,6 +14,49 @@
   letter-spacing: 4px;
   font-weight: 500;
   font-size: 16px;
+}
+input[type=text] {
+  background-color: #0000;
+  padding: 10px 20px;
+  resize: none;
+  outline: none;
+  text-align: start;
+  border: 0px;
+}
+input[type=text]:hover{
+  background-color: #ccc;
+}
+button {
+  background-color: #0000;
+  border: 0px;
+  padding: 10px 20px;
+  min-width: 70px;
+}
+button:hover {
+  background-color: #ccc;
+}
+li:hover {
+  background-color: #ccc;
+}
+/* specific elements */
+.Flex-End {
+  display: flex;
+  justify-content: flex-end;
+}
+.Color-Red {
+  background-color: red;
+}
+.Categories {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+.Tasks {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0px auto;
 }
 .App {
   margin: 0px;
@@ -91,44 +113,8 @@ main {
 .Button-Danger {
   color: red !important;
 }
-
-input[type=text] {
-  background-color: #0000;
-  padding: 10px 20px;
-  resize: none;
-  outline: none;
-  text-align: start;
-  border: 0px;
-}
-input[type=text]:hover{
-  background-color: #ccc;
-}
-
-
 .Scroll-Y {
   flex: auto;
   overflow-y: auto;
   height: 100px;
-}
-
-button {
-  background-color: #0000;
-  border: 0px;
-  padding: 10px 20px;
-  min-width: 70px;
-}
-button:hover {
-  background-color: #ccc;
-}
-li:hover {
-  background-color: #ccc;
-}
-
-
-.Flex-End {
-  display: flex;
-  justify-content: flex-end;
-}
-.Color-Red {
-  background-color: red;
 }
